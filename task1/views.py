@@ -13,7 +13,7 @@ class CartTemplate(TemplateView):
     template_name = 'fourth_task/cart.html'
 
 
-class CosmeticsTemplate(TemplateView):
+class GamesTemplate(TemplateView):
     template_name = 'fourth_task/game.html'
     games = Game.objects.all()
     extra_context = {
