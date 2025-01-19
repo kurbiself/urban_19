@@ -3,7 +3,7 @@ from django.db import models
 
 class Buyer(models.Model):
     name = models.CharField(max_length=30)
-    balance = models.DecimalField(decimal_places=2, max_digits=10)
+    balance = models.DecimalField(decimal_places=2, max_digits=10, null=True)
     age = models.IntegerField()
 
 
@@ -20,3 +20,8 @@ class News(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
     date = models.DateField(auto_now_add=True)
+
+
+class Store(models.Model):
+    address = models.CharField(null=True)
+    name = models.CharField(null=True)
